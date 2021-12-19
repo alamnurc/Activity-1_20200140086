@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Data KTP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Berikut tabel dengan menampilkan 20 data KTP:</div>
+        <table border="1"></br>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nomor KTP</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                </tr>
+            </thead>
+            <tbody th:each="tampil:${table}">
+                <tr>
+                    <td th:text="${tampil[0]}"></td>
+                    <td th:text="${tampil[1]}"></td>
+                    <td th:text="${tampil[2]}"></td>
+                    <td th:text="${tampil[3]}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <div>Alam Nurcahaya - 20200140086 - Kelas B</div>
+        <p th:text="${result}"></p>
+    </body>
+</html>
